@@ -1,1 +1,1 @@
-web: ./build/install/todo/bin/cobrasquad
+web: ./build/install/cobrasquad/bin/cobrasquad
