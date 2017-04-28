@@ -1,10 +1,10 @@
-## Java App Template
+## Cobra Squad Java App
 
 By William Mbotela
 
 ## Description
 
-A template java app folder structure for use with gradle , junit, spark and velocity.
+A Java webapp that allows a user to create superheroes and assign them to a squad
 
 ##Setup/Installation Requirements
 * Clone repo
@@ -13,3 +13,4 @@ A template java app folder structure for use with gradle , junit, spark and velo
 
 
 ## GitHub link
+* https://github.com/wmbotela/Cobra-Squad
