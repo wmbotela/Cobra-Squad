@@ -3,6 +3,7 @@ apply plugin: 'application'
 
 archivesBaseName = "cobrasquad"
 version = '1.0'
+applicationName = "cobrasquad"
 mainClassName = "App"
 
 repositories {
