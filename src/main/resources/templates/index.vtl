@@ -1,4 +1,39 @@
-<h1>Cobra Squad</h1>
+<div class= container>
+  <div class=jumbotron>
+    <h1>Cobra Squad</h1>
+  </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">New Squad</a></li>
+        <li><a href="#">Top Squad</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<a href="">New Squad</a>
-<a href="">Top Squads</a>
+  <h3>Build the Ultimate crime fighting squad...</h3>
+  <div class="container">
+    <div class="col-md-4">
+      <h3>New Squad Member</h3>
+        <form action="/heroes" method="post">
+          <label for="name"></label>
+          <input type="text" name="name" id="name" class="form-control">
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" class="form-control">
+          <label for="power">Power</label>
+          <input type="text" name="power" id="power" class="form-control">
+          <label for="attack">Attack Rating</label>
+          <input type="number" name="attack" id="attack" class="form-control">
+          <label for="defense">Defense Rating</label>
+          <input type="number" name="defense" id="defense" class="form-control">
+          <button type="submit" class="btn btn-primary">Create Hero</button>
+        </form>
+
+    </div>
+    <div class="col-md-8">
+      <h3>Squads</h3>
+    </div>
+  </div>
+
+</div>
