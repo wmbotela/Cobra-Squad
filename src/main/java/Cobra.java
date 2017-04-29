@@ -41,6 +41,32 @@ public class Cobra {
   public int getDefense() {
     return mDefense;
   }
+  public void recruit() {
+    mInSquad = true;
+  }
+
+  public static Map<String, Cobra> all() {
+    return instances;
+  }
+
+  public static void clear() {
+    instances.clear();
+  }
+
+  public static Cobra getCobra(String name) {
+    return instances.get(name);
+  }
+
+  public static List<Cobra> getAvailableCobra() {
+    List<Cobra> availableCobra = new ArrayList<Cobra>();
+
+    for (String key : instances.keySet()) {
+      if (!instances.get(key).mInSquad) {
+        availableCobra.add(instances.get(key));
+      }
+    }
+    return availableCobra;
+  }
 
 
 
