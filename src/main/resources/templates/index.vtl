@@ -33,6 +33,37 @@
     </div>
     <div class="col-md-8">
       <h3>Squads</h3>
+      <div class="row">
+  #foreach ($i in $squads.keySet())
+    #set ( $cols = 12/$squads.size() )
+    <div class="col-md-$cols">
+      <h1>
+        <a href="/squads/$squads.get($i).getName()">$squads.get($i).getName()</a></h1>
+      <h4>$squads.get($i).getCause()</h4>
+      <ul>
+        #foreach ($cobra in $squads.get($i).getCobras())
+          <div class="cobra">
+            <li>
+              <h5>Cobra Name: $cobra.getName()</h5>
+              <ul>
+                <!-- <h5>Age: $cobra.getAge()</h5> -->
+                <li><h6>Ability: $cobra.getPower()</h6></li>
+                <!-- <h5>Attack Rating: $cobra.getAttack()</h5> -->
+                <!-- <h5>Defense Rating: $cobra.getDefense()</h5> -->
+              </ul>
+            </li>
+          </div>
+        #end
+      </ul>
+    </div>
+    #end
+</div>
+<div class="row">
+  <a class="btn btn-primary" href="/squads/new">New Squad</a>
+</div>
+<div class="row">
+  <a class="btn btn-primary" href="/cobras/new">New Cobra</a>
+</div>
     </div>
   </div>
 

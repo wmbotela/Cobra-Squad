@@ -1,0 +1,14 @@
+<h1>Squad: $squad.getName()</h1>
+<h4>Cause: $squad.getCause()</h4>
+<h4>Cobras: </h4>
+<ul>
+  #foreach ($cobra in $squad.getCobras())
+    <li>
+      <h5>
+        <a href="/squads/$squad.getName()/cobrass/$cobra.getName()">$cobra.getName()</a>
+      </h5>
+    </li>
+  #end
+</ul>
+<a class="btn btn-primary" href="/squads">View all Squads</a>
+<a href="/squads/$squad.getName()/cobras/new" class="btn btn-primary">Recruit a new cobra</a>
