@@ -1,0 +1,29 @@
+#if ($cobras.size() > 0)
+  <form action="/squads/$squadID" method="post">
+    <div class="row" id="row2">
+      #foreach ($cobra in $cobras)
+      #set ( $cols = 12/$cobras.size() )
+      <div class="col-md-$cols">
+        <div class="cobra form-group">
+          <!-- <h4>Name: $cobra.getName():</h4> -->
+          <h4><input type="checkbox" name="cobras" value="$cobra.getName()"> $cobra.getName()</h4>
+          <ul>
+            <h5>Age: $cobra.getAge()</h5>
+            <h5>Ability: $cobra.getPower()</h5>
+            <h5>Attack: $cobra.getAttack()</h5>
+            <h5>Defense: $cobra.getDefense()</h5>
+          </ul>
+        </div>
+      </div>
+      #end
+    </div>
+    <button class="btn btn-primary" type="submit">Recruit Cobra</button>
+  </form>
+#else
+<div class="row">
+  <h4>No Cobras available for recruitment.</h4>
+</div>
+#end
+<div class="row">
+  <a class="btn btn-primary" href="/squads/$squadID">Return to Squad</a>
+</div>
