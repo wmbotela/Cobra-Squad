@@ -1,23 +1,15 @@
-<div class= container>
+<div class="container">
   <div class=jumbotron>
     <h1>Cobra Squad</h1>
   </div>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">New Squad</a></li>
-        <li><a href="#">Top Squad</a></li>
-      </ul>
-    </div>
-  </nav>
 
   <h3>Build the Ultimate crime fighting squad...</h3>
+
   <div class="container">
     <div class="col-md-4">
-      <h3>New Squad Member</h3>
+      <h3>New Cobra</h3>
         <form action="/cobras" method="post">
-          <label for="name"></label>
+          <label for="name">Name</label>
           <input type="text" name="name" id="name" class="form-control">
           <label for="age">Age</label>
           <input type="number" name="age" id="age" class="form-control">
@@ -27,12 +19,12 @@
           <input type="number" name="attack" id="attack" class="form-control">
           <label for="defense">Defense Rating</label>
           <input type="number" name="defense" id="defense" class="form-control">
-          <button type="submit" class="btn btn-primary">Create Squad</button>
+          <button type="submit" class="btn btn-primary">Create a Cobra </button>
         </form>
 
     </div>
     <div class="col-md-8">
-      <h3>Squads</h3>
+      <h3>Available Squads</h3>
       <div class="row">
   #foreach ($i in $squads.keySet())
     #set ( $cols = 12/$squads.size() )
@@ -46,10 +38,9 @@
             <li>
               <h5>Cobra Name: $cobra.getName()</h5>
               <ul>
-                <!-- <h5>Age: $cobra.getAge()</h5> -->
+
                 <li><h6>Ability: $cobra.getPower()</h6></li>
-                <!-- <h5>Attack Rating: $cobra.getAttack()</h5> -->
-                <!-- <h5>Defense Rating: $cobra.getDefense()</h5> -->
+
               </ul>
             </li>
           </div>
@@ -61,9 +52,9 @@
 <div class="row">
   <a class="btn btn-primary" href="/squads/new">New Squad</a>
 </div>
-<div class="row">
+<!-- <div class="row">
   <a class="btn btn-primary" href="/cobras/new">New Cobra</a>
-</div>
+</div> -->
     </div>
   </div>
 
