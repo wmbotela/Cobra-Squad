@@ -38,11 +38,11 @@ public class SquadTest {
     assertEquals(2, Squad.all().size());
     Squad.clear();
     assertEquals(0, Squad.all().size());
-    
+
   }
 
   @Test
-  public void getCobras_returnsHashOfCobrass_true(){
+  public void getCobras_returnsHashOfCobras_true(){
     Cobra newCobra1 = new Cobra("Sindano", 41, "resourcefulness", 4, 5);
     testSquad1.addCobra(newCobra1);
     Cobra newCobra2 = new Cobra("Sindano", 41, "resourcefulness", 4, 5);
@@ -54,7 +54,7 @@ public class SquadTest {
   public void addCobra_addsCobraToCobraHash_true(){
     Cobra newCobra = new Cobra("Sindano", 41, "resourcefulness", 4, 5);
     testSquad1.addCobra(newCobra);
-    assertTrue(testSquad1.getCobrass().containsKey("Sindano"));
+    assertTrue(testSquad1.getCobras().containsKey("Sindano"));
   }
   @After
   public void tearDown(){
